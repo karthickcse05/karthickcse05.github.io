@@ -1,0 +1,40 @@
+
+<head>
+<style>
+.content { display:none }
+</style>
+<script src="jquery.js"></script>
+<script>
+$(function() {
+  $(".but").on("click",function(e) {
+    e.preventDefault();
+    $(".content").hide();
+    $("#"+this.id+"div").show();
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="navigation">
+    <button class="but" type="button" id="addteam">Add New Team</button>
+    <button class="but" type="button" id="addplayer">Add New Player</button>
+    <button class="but" type="button" id="addgame">Add New Game</button> 
+    <button class="but" type="button" id="deleteteam">Delete Team</button>
+    <button class="but" type="button" id="deleteplayer">Delete Player</button>
+    <button class="but" type="button" id="deletegame">Delete Game</button>
+    <button class="but" type="button" id="addplayermatch">Add Player To Match</button>
+    <button class="but" type="button" id="deleteplayermatch">Remove Player From Match</button>
+</div>
+
+<div id="addplayerdiv" class="content">
+    <h2>Add New Player</h2>
+    <form ...>
+    </form>
+</div>
+<div id="addteamdiv" class="content">
+    <h2>Add New Team</h2>
+    <form ...>
+    </form>
+</div>
+</body>
